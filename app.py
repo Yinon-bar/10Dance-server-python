@@ -7,6 +7,3 @@ from flask_smorest import Blueprint,abort
 
 blp = Blueprint("",__name__,description="Operations on ")
 
-##try1 ,
-
-#שניה אחי
