@@ -1,7 +1,8 @@
-from flask import Flask,request,abort
+import uuid
+from flask import request
+from flask.views import MethodView
+from flask_smorest import Blueprint,abort
 
-app = Flask("app")
-
-@get('/get_all')
 
 
+blp = Blueprint("",__name__,description="Operations on ")
