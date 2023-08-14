@@ -16,7 +16,9 @@ class Attendance(MethodView):
 
     def get(self):
         query = "show tables from zerdance_general "
-        return DbConn.get_query_results(query=query)
+        results =  DbConn().get_query_results(query=query)
+        unpack_result = [d['Tables_in_zerdance_general'] for d in results]
+
 
 
 
