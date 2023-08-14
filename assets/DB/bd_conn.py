@@ -1,5 +1,6 @@
 import pymysql.cursors
-from pymysql import err,Error,InterfaceError
+from pymysql import err, Error, InterfaceError
+
 
 class DbConn:
     # Connect to the database
@@ -20,13 +21,12 @@ class DbConn:
         except Error as e:
             print(f"got general error: {e}")
 
-
-
-    def get_query_results(self,query=str):
+    def get_query_results(self, query=str):
+        """
+        retrieve query results from the DB
+        :param query: str -> plan sql query
+        :return: list-> of the results
+        """
         with self.get_conn() as db:
             db.execute(query=query)
-            rows = db.fetchall()
-            for row in rows:
-                print(f'{row[0]} {row[1]} {row[2]}')
-
-            return rows
+            return db.fetchall()

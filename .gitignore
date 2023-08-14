@@ -1,1 +1,5 @@
 ./env
+/*.pyc
+assets/DB/__pycache__/bd_conn.cpython-39.pyc
+
+
